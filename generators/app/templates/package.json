@@ -1,0 +1,90 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.0",
+  "description": "<%= projectDescription %>",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "ignore-sync": "ignore-sync",
+    "dev":
+      "cross-env CONFIG_ENV=development nodemon --watch server server/index.js",
+    "build": "next build",
+    "start": "node server/index.js",
+    "precommit": "lint-staged",
+    "prepush": "yarn lint-staged && yarn test",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "storybook":
+      "poi --config .storybook/poi.config.js --storybook -s ./static",
+    "codecov": "jest --coverage --verbose --color",
+    "test": "jest"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "fastify": "^1.1.1",
+    "font-awesome": "^4.7.0",
+    "next": "^5.0.1-canary.16",
+    "next-redux-saga": "^2.0.1",
+    "next-redux-wrapper": "^1.3.5",
+    "prop-types": "^15.6.1",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-knobs": "^3.3.15",
+    "@storybook/addon-notes": "^3.3.15",
+    "@storybook/addon-viewport": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "@zeit/next-sass": "^0.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.0.0-alpha.0",
+    "babel-plugin-flow-runtime": "^0.17.0",
+    "babel-plugin-inline-react-svg": "^0.5.2",
+    "babel-plugin-ramda": "^1.5.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "flow-bin": "^0.68.0",
+    "flow-runtime": "^0.17.0",
+    "husky": "^0.14.3",
+    "ignore-sync": "^1.0.1",
+    "import-sort-cli": "^4.2.0",
+    "import-sort-parser-babylon": "^4.2.0",
+    "import-sort-style-module": "^4.2.0",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.17.2",
+    "poi": "^9.6.13",
+    "poi-preset-react": "^9.2.1",
+    "poi-preset-storybook": "^0.1.4",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-url": "^7.3.1",
+    "prettier-standard": "^8.0.0",
+    "sass-loader": "^6.0.7",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-recommended-scss": "^3.1.0",
+    "stylelint-scss": "^2.5.0"
+  },
+  "importSort": {
+    ".js": {
+      "parser": "import-sort-parser-babylon",
+      "style": "import-sort-style-module"
+    }
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "envs": ["jest"]
+  }
+}

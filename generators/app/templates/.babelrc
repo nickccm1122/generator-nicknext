@@ -1,0 +1,33 @@
+{
+  "presets": [
+    "next/babel",
+    "flow"
+  ],
+  "plugins": [
+    "babel-plugin-inline-react-svg"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["next/babel", {
+          "preset-env": {
+            "modules": "commonjs"
+          }
+        }]
+      ]
+    },
+    "development": {
+      "plugins": [
+        ["babel-plugin-flow-runtime", {
+          "assert": true,
+          "annotate": true
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "babel-plugin-ramda"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+version: "3.4" # target stage requires 3.4+
+services:
+  ticketing-web:
+    build:
+      context: .
+      target: development
+    image: ticketing-web:dev
+    entrypoint: ["yarn", "dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./components:/srv/app/components
+      - ./config:/srv/app/config
+      - ./containers:/srv/app/containers
+      - ./pages:/srv/app/pages
+      - ./scss:/srv/app/scss
+      - ./server:/srv/app/server
+      - ./static:/srv/app/static
+      - ./types:/srv/app/types
+      - ./utils:/srv/app/utils
