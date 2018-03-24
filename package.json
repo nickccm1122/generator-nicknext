@@ -6,7 +6,6 @@
     "name": "Nick Chan",
     "email": "nick.ccm1122@gmail.com"
   },
-  "files": ["generators"],
   "main": "generators/index.js",
   "keywords": ["yeoman-generator"],
   "license": "MIT",
