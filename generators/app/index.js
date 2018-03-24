@@ -38,13 +38,13 @@ module.exports = class extends Generator {
 
   writing () {
     this.fs.copyTpl(
-      `${this.templatePath()}//**/!(_)`,
+      `${this.templatePath()}/**/!(_)`,
       this.destinationPath(),
       this.props,
       { globOptions: { dot: true } }
     )
     this.fs.copyTpl(
-      `${this.templatePath()}//**/.*`,
+      `${this.templatePath()}/**/.*`,
       this.destinationPath(),
       this.props,
       { globOptions: { dot: true } }
