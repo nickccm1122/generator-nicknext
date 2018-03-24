@@ -10,13 +10,15 @@
   "main": "generators/index.js",
   "keywords": ["yeoman-generator"],
   "license": "MIT",
+  "repository": "nickccm1122/generator-nicknext",
   "scripts": {
     "ignore-sync": "ignore-sync",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
     "prepush": "yarn lint-staged && yarn test",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "test": "jest"
+    "test": "jest",
+    "release": "np"
   },
   "dependencies": {
     "chalk": "^2.3.2",
@@ -33,6 +35,7 @@
     "import-sort-style-module": "^4.2.0",
     "jest": "^22.4.3",
     "lint-staged": "^7.0.0",
+    "np": "^2.20.1",
     "prettier-standard": "^8.0.0",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1",
