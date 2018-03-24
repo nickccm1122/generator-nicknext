@@ -40,14 +40,12 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       `${this.templatePath()}/**/!(_)`,
       this.destinationPath(),
-      this.props,
-      { globOptions: { dot: true } }
+      this.props
     )
     this.fs.copyTpl(
       `${this.templatePath()}/**/.*`,
       this.destinationPath(),
-      this.props,
-      { globOptions: { dot: true } }
+      this.props
     )
     // Copy .storybook
     this.fs.copyTpl(
