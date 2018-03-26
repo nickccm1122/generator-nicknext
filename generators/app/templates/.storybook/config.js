@@ -1,5 +1,3 @@
-import 'font-awesome/css/font-awesome.min.css'
-
 import '../scss/styles.scss'
 
 import { withKnobs } from '@storybook/addon-knobs'

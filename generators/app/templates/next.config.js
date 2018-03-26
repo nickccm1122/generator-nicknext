@@ -10,7 +10,7 @@ module.exports = withSass({
   webpack: (config, options) => {
     // for both dev or production build, put font files into .next/static
     config.module.rules.push({
-      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      test: /\.woff2?$/,
       use: [
         {
           loader: 'url-loader',
@@ -25,7 +25,7 @@ module.exports = withSass({
       ]
     })
     config.module.rules.push({
-      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      test: /\.(ttf|eot|svg)$/,
       use: [
         {
           loader: 'file-loader',
